@@ -32,25 +32,26 @@ const makeTitle = title ? title + " | " + "Vanty" : "Vanty";
 
     <SEO
       title={makeTitle}
-      description="Astroship Pro - SAAS & Startup Website Template for Astro built with TailwindCSS."
+      description="Vanty - Plataforma inteligente para gestionar reservas médicas a través de WhatsApp."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@tu_usuario_twitter",
+        site: "@vantyapp",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship Pro - SAAS &Startup Website Template for Astro`,
+          title: "Vanty - Reserva tus citas médicas con WhatsApp",
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Vanty - Plataforma de reservas médicas con WhatsApp",
         },
       }}
     />
+
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
