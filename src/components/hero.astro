@@ -3,17 +3,15 @@ import { Picture } from "astro:assets";
 import heroImage from "../assets/hero-screenshot.png";
 import Link from "@components/ui/link.astro";
 import Container from "@components/container.astro";
+import heroVideo from "../assets/videos/landingvideo.mov";
+
 ---
 
 <div class="overflow-x-clip">
   <Container>
     <main class="grid lg:grid-cols-5 place-items-center relative">
-      <div
-        class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-      </div>
-      <div
-        class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-      </div>
+     
+     
 
       <div class="max-w-sm md:max-w-max lg:col-span-2">
         <h1
@@ -37,14 +35,11 @@ import Container from "@components/container.astro";
         </div>
       </div>
       <div class="py-3 lg:col-span-3 lg:-mr-44">
-        <Picture
-          src={heroImage}
-          alt="Astronaut in the air"
-          formats={["avif", "webp"]}
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          widths={[240, 540, 720, heroImage.width]}
-          loading="eager"
-          fetchpriority="high"
+        <video
+        src={heroVideo}
+        class="w-full max-w-lg rounded-lg"
+        autoplay
+        loop  
         />
       </div>
     </main>
