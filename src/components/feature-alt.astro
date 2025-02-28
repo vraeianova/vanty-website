@@ -2,7 +2,6 @@
 import Badge from "@components/ui/badge.astro";
 import { Picture } from "astro:assets";
 import FeatureImg1 from "../assets/features/6.png";
-import FeatureImg2 from "../assets/features/2.png";
 import { Icon } from "astro-icon/components";
 import Link from "@components/ui/link.astro";
 
@@ -10,8 +9,6 @@ import logoCemesa from "../assets/logos/Cemesa.svg"
 import logoHMC from "../assets/logos/HMC.svg"
 import logoHonducare from "../assets/logos/Honducare.svg"
 import logoMeliori from "../assets/logos/Meliori.svg"
-import logoUnidosMC from "../assets/logos/Unidos-MC.svg"
-import logoUnidos from "../assets/logos/Unidos.svg"
 
 const { nomargin } = Astro.props;
 ---
@@ -21,7 +18,6 @@ const { nomargin } = Astro.props;
     "max-w-4xl mx-auto flex flex-col items-center justify-center",
     !nomargin && "mt-24",
   ]}>
-  <Badge color="purple">TWO-COL FEATURES</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
     The power of WhatsApp
   </h2>
@@ -97,7 +93,8 @@ const { nomargin } = Astro.props;
 
    
 <div class="text-center">
-  <h2 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+ 
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
     Feedback from Healthcare Specialists Near You
   </h2>
   <div
