@@ -7,61 +7,44 @@ import jussaraTurcios from "@assets/testimonials/3-jussara.png";
 import juanAngelDiaz from "@assets/testimonials/1-JuanDiaz.png";
 import wendyMoncada from "@assets/testimonials/6-Wendy.png";
 
-const userLang = navigator.language.startsWith("es") ? "es" : "en";
-
 const testimonials = [
   {
     name: "Dr. Allan Zelaya",
     title: "Endocrinologist, Cemesa",
     image: allanZelaya,
-    text: {
-      es: "Este software tiene el potencial de transformar la atención al paciente, optimizando el tiempo y mejorando la colaboración en temas clave para nuestros pacientes. Esperamos ver cómo incrementa la productividad.",
-      en: "This software has the potential to transform patient care, optimizing time and improving collaboration on key issues for our patients. We look forward to seeing how it increases productivity."
-    }
+    text: "This software has the potential to transform patient care, optimizing time and improving collaboration on key issues for our patients. We look forward to seeing how it increases productivity."
   },
   {
     name: "Dr. Ligia Palma",
     title: "Director of Honducare",
     image: ligiaPalma,
-    text: {
-      es: "Vanty parece ser el software que hemos estado esperando. Facilita los procesos, mejora la atención al cliente y, en nuestra opinión, podría aumentar las citas para los médicos de Honducare.",
-      en: "Vanty seems to be the software we’ve been waiting for. It streamlines processes, improves customer service, and in our opinion, could increase appointments for Honducare doctors."
-    }
+    text: "Vanty seems to be the software we’ve been waiting for. It streamlines processes, improves customer service, and in our opinion, could increase appointments for Honducare doctors."
   },
   {
     name: "Dr. Jussara Turcios",
     title: "Podiatry Specialist",
     image: jussaraTurcios,
-    text: {
-      es: "Vanty es una herramienta innovadora que facilita la comunicación con los pacientes y optimiza nuestra eficiencia. Creemos que es indispensable para cualquier clínica o profesional de la medicina.",
-      en: "Vanty is an innovative tool that facilitates communication with patients and optimizes our efficiency. We believe it’s essential for any clinic or medical professional."
-    }
+    text: "Vanty is an innovative tool that facilitates communication with patients and optimizes our efficiency. We believe it’s essential for any clinic or medical professional."
   },
   {
     name: "Dr. Juan Ángel Díaz",
     title: "President of Internal Medicine Doctors in Monterrey",
     image: juanAngelDiaz,
-    text: {
-      es: "El seguimiento de citas, reprogramaciones y cancelaciones nos permite gestionar mejor el tiempo y aplicar mejores prácticas. A medida que se perfeccione el producto, será aún más eficaz.",
-      en: "Tracking appointments, reschedules, and cancellations allows us to manage time more effectively and apply best practices. As the product is refined, it will become even more effective."
-    }
+    text: "Tracking appointments, reschedules, and cancellations allows us to manage time more effectively and apply best practices. As the product is refined, it will become even more effective."
   },
   {
     name: "Dr. Wendy Moncada",
     title: "Infectologist, Clínica Meliori y Medical Center",
     image: wendyMoncada,
-    text: {
-      es: "Vanty optimiza el trabajo de mi asistente, reduciendo el tiempo dedicado a consultas repetitivas y aumentando la efectividad en la programación automática de citas. Estamos ansiosos por ver cómo sigue mejorando.",
-      en: "Vanty optimizes my assistant’s work, reducing time spent on repetitive consultations and increasing the effectiveness of automated appointment scheduling. We are eager to see how it continues to improve."
-    }
+    text: "Vanty optimizes my assistant’s work, reducing time spent on repetitive consultations and increasing the effectiveness of automated appointment scheduling. We are eager to see how it continues to improve."
   }
 ];
 ---
+
 <Container>
   <div class="mt-24">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
-      {userLang === "es" ? "Primeras Impresiones" : "First Impressions"}
-      <span class="text-indigo-600">{userLang === "es" ? "Reseñas de Pre-Lanzamiento" : "Pre-launch Reviews"}</span>
+      First Impressions <span class="text-indigo-600">Pre-launch Reviews</span>
     </h2>
   </div>
 </Container>
@@ -71,10 +54,10 @@ const testimonials = [
   <div class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-100 right-1/3 translate-x-2/3 top-10"></div>
   <div class="relative md:flex gap-10 overflow-hidden py-5 group">
     <div class="md:motion-safe:animate-marquee w-auto py-5 overflow-x-auto flex flex-nowrap min-w-full shrink-0 items-stretch gap-10 snap-x snap-mandatory px-5">
-      {testimonials.map((item) => <Review {...item} text={item.text[userLang]} />)}
+      {testimonials.map((item) => <Review {...item} />)}
     </div>
     <div class="md:motion-safe:animate-marquee hidden md:motion-reduce:hidden md:flex min-w-full shrink-0 items-center gap-10">
-      {testimonials.map((item) => <Review {...item} text={item.text[userLang]} />)}
+      {testimonials.map((item) => <Review {...item} />)}
     </div>
   </div>
 </div>

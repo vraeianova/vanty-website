@@ -1,55 +1,42 @@
 ---
-import Badge from "@components/ui/badge.astro";
 import checklistIcon from "@assets/icons/checklist.png";
 import chatIcon from "@assets/icons/chat.png";
 import bellIcon from "@assets/icons/bell.png";
 
-const userLang = navigator.language.startsWith("es") ? "es" : "en";
-
 const steps = [
   {
-    step: { es: "Paso 1.", en: "Step 1." },
-    title: { es: "Únete a la lista de espera", en: "Join the Waitlist" },
-    description: {
-      es: "Regístrate hoy para obtener acceso exclusivo anticipado.",
-      en: "Sign up today for exclusive early access."
-    },
+    step: "Step 1.",
+    title: "Join the Waitlist",
+    description: "Sign up today for exclusive early access.",
     image: checklistIcon,
   },
   {
-    step: { es: "Paso 2.", en: "Step 2." },
-    title: { es: "Conecta tu WhatsApp Business", en: "Connect Your WhatsApp Business" },
-    description: {
-      es: "Prepárate para integrar WhatsApp y automatizar reservas en el lanzamiento.",
-      en: "Prepare to integrate WhatsApp for automated bookings at launch."
-    },
+    step: "Step 2.",
+    title: "Connect Your WhatsApp Business",
+    description: "Prepare to integrate WhatsApp for automated bookings at launch.",
     image: chatIcon,
   },
   {
-    step: { es: "Paso 3.", en: "Step 3." },
-    title: { es: "Monitorea tu actividad", en: "Track Your Activity" },
-    description: {
-      es: "Supervisa fácilmente tu progreso con nuestro poderoso panel de control.",
-      en: "Easily monitor your progress with our powerful dashboard!"
-    },
+    step: "Step 3.",
+    title: "Track Your Activity",
+    description: "Easily monitor your progress with our powerful dashboard!",
     image: bellIcon,
   },
 ];
 ---
 <div class="mt-24 max-w-3xl mx-auto text-center">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    {userLang === "es" ? "Comienza ahora con " : "Start now with "}
-    <span class="text-indigo-600">Vanty</span>
+    Start now with <span class="text-indigo-600">Vanty</span>
   </h2>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
   {steps.map((item) => (
     <div class="flex flex-col bg-white shadow-lg rounded-xl p-6">
-      <h3 class="text-lg font-bold mb-2">{item.step[userLang]}</h3>
-      <img src={item.image.src} alt={item.title[userLang]} class="w-20 h-20 mb-4 self-center" />
-      <h4 class="text-xl font-semibold mt-2 text-center">{item.title[userLang]}</h4>
-      <p class="text-slate-500 mt-2 leading-relaxed text-center">{item.description[userLang]}</p>
+      <h3 class="text-lg font-bold mb-2">{item.step}</h3>
+      <img src={item.image.src} alt={item.title} class="w-20 h-20 mb-4 self-center" />
+      <h4 class="text-xl font-semibold mt-2 text-center">{item.title}</h4>
+      <p class="text-slate-500 mt-2 leading-relaxed text-center">{item.description}</p>
     </div>
   ))}
 </div>
