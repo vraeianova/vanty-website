@@ -1,10 +1,8 @@
 ---
 
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
-import Dropdown from "./dropdown.astro";
 import { StickyHeader, Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { Image, Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 import vantyFullColor from "@assets/vanty-fullcolor.svg";
 const menuitems = [
@@ -20,9 +18,9 @@ const menuitems = [
 ---
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
-  scrollY={130}
-  defaultClass="py-5 border-transparent"
-  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg">
+  scrollY={10}
+  defaultClass="py-5 border-transparent py-2 bg-white/90 border-gray-200 backdrop-blur-xl"
+  >
   <Container>
     <div
       class="flex flex-row justify-between items-center relative z-10"
